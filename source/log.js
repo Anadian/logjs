@@ -113,11 +113,11 @@ function Log(process_name, module_name, file_name, function_name, level_name, me
 	return _return;
 }
 function Log_Test(){
-	Log(process.argv0, 'test', __filename, arguments.callee.name, 'error', 'yo');
-	Log(process.argv0, 'test', __filename, arguments.callee.name, 'warn', 'yo');
-	Log(process.argv0, 'test', __filename, arguments.callee.name, 'note', 'yo');
-	Log(process.argv0, 'test', __filename, arguments.callee.name, 'info', 'yo');
-	Log(process.argv0, 'test', __filename, arguments.callee.name, 'debug', 'yo');
+	Log(process.argv0, 'test', Path.basename(__filename), arguments.callee.name, 'error', 'yo');
+	Log(process.argv0, 'test', Path.basename(__filename), arguments.callee.name, 'warn', 'yo');
+	Log(process.argv0, 'test', Path.basename(__filename), arguments.callee.name, 'note', 'yo');
+	Log(process.argv0, 'test', Path.basename(__filename), arguments.callee.name, 'info', 'yo');
+	Log(process.argv0, 'test', Path.basename(__filename), arguments.callee.name, 'debug', 'yo');
 }
 
 if(require.main === module){
