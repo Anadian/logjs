@@ -1,6 +1,6 @@
 #!/usr/local/bin/node
 /**
-*	@file source/log.js
+*	@file logjs/source/main.js
 *	@author Anadian
 *	@copyright MIT License:
 	Copyright 2017 Canosw
