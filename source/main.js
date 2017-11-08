@@ -45,6 +45,16 @@ function appendFile_Callback(error){
 	if(error != null) console.error('AppendFile error: ', error);
 }
 
+function ReturnObject(code, message){
+	var return_message = code.toString()+': '+message;
+	if(arguments.length > 2){
+		for(var i = 2; i < arguments.length; i++){
+			return_message += ('|'+Utility.inspect(arguments[i]));
+		}
+	}
+	return [code,return_message];
+}
+
 function Log(process_name, module_name, file_name, function_name, level_name, message){
 	var _return = [0,null];
 	var error_message = null;
